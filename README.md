@@ -1,7 +1,11 @@
-Resolución del ejercicio N°25 de la unidad 3 de programación 2.
-Este programa modela un sistema de gestión para una biblioteca que administra diferentes tipos de materiales bibliográficos mediante el uso de herencia, atributos protegidos, polimorfismo y colecciones en Java.
+Este programa está diseñado para modelar un catálogo de recursos para una biblioteca aplicando los pilares de la programación orientada a objetos en Java: herencia, encapsulamiento, reutilización de código mediante la palabra clave super y polimorfismo para el recorrido y visualización de colecciones mixtas de objetos.
 
-Clases utilizadas
-MaterialBiblioteca: Clase base que almacena los datos comunes (titulo, anioEdicion, editorial) y define el método general de consulta.
-Libro: Clase hija que extiende de MaterialBiblioteca e incorpora atributos específicos como el autor y el número de páginas, sobrescribiendo el método de visualización.
-Revista: Clase hija que extiende de MaterialBiblioteca e incorpora el número de edición y el mes de publicación, sobrescribiendo también el método de visualización.
+A continuación se detalla exactamente lo que hace cada parte del programa:
+
+Define la clase base MaterialBiblioteca: Concentra los atributos comunes a cualquier recurso bibliográfico (titulo, anioEdicion y editorial), provee un constructor centralizado y define un método base para consultar los datos generales.
+
+Desarrolla las subclases Libro y Revista: Extienden de MaterialBiblioteca incorporando atributos y comportamientos particulares (como autor y numeroPaginas para el libro; numeroEdicion y mesPublicacion para la revista).
+
+Utiliza super(...): Garantiza la correcta inicialización de los atributos heredados invocando al constructor de la clase superior desde cada subclase.
+
+Ejecuta la prueba en el main: Crea una colección mixta (una lista polimórfica de tipo MaterialBiblioteca), la recorre en un bucle invocando el método de visualización propio de cada material y muestra el catálogo completo por consola.
